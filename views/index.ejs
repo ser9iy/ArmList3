@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Облік</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+ 
+  
+  <link rel="stylesheet" href="styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+<body>
+ 
+
+
+
+
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-2 ">
+  
+  <h4></i>Дані по закладах  </h4> 
+</div>
+<div class="col-md-4"><div class="spinner">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+  <div class="bounce4"></div>
+</div></div>
+<div class="col-md-3"><div class="btn-group" role="group" aria-label="Basic example">
+  <!--<a href="/chort" class="btn btn-primary " >Район</a>-->
+  <a href="/dashboard" class="btn btn-success " >Оновити</a>
+  <a href="/logout" class="btn btn-info " >Вихід</a></div></div>
+</div>
+
+
+
+  <hr>  
+  <div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-8 ">
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th><i class="far fa-building"> </i> Магазин</th>
+      <th>Цифeрка</th>
+      <th style="text-align:center;">Баланс <br> на карточках</th>
+       <th style="text-align:center;"><i class="far fa-clock"></i> Час <br> оновлення</th>
+       
+       <th style="text-align:center;">Попередня <br>    Зміна </th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      <% for(var i=0; i<quotes.length; i++) {%>
+     <tr>
+     
+      <th scope="row"><%= i+1 %></th>
+      <td></i>
+        <%= quotes[i].name %></td>
+     
+      <% if (quotes[i].quote.indexOf("+") !== -1    ) { %>
+        <td style="font-weight: bold;background-color:cornflowerblue;"><%= quotes[i].quote %></td>
+      <% } %>
+       <% if (quotes[i].quote.indexOf("-") !== -1    ) { %>
+        <td style="font-weight: bold;background-color:lightcoral;"><%= quotes[i].quote %></td>
+      <% } %>
+
+
+      <td style="text-align:center;"><%= 
+        
+        quotes[i].cardsCash %></td>
+    
+        <td style="text-align:center;">
+            
+          <%= 
+        
+          quotes[i].time %></td>
+          
+            <td style="text-align:center;background-color:rgba(175, 211, 189, 0.445);font-weight: bold;">
+               
+              <%= 
+        
+              quotes[i].zmina %></td>
+    </tr>
+      <% } %>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+</div>
+</div>
+ <hr>
+ <div class="row justify-content-md-center">
+      <footer class="footer centered">
+          <p>&copy; Ternopil 2017</p>
+      </footer>
+
+    </div>
+    </div>
+    
+
+   <script src="main.js"></script>
+
+</body>
+</html>

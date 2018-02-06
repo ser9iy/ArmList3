@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Облік</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+ 
+
+
+
+
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-2 ">
+  <h4>Дані по закладах </h4>
+</div>
+<div class="col-md-4"><div class="spinner">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+  <div class="bounce4"></div>
+</div></div>
+<div class="col-md-3"><div class="btn-group" role="group" aria-label="Basic example">
+    <a href="/dashboard" class="btn btn-primary " >Місто</a>
+    <a href="/chort" class="btn btn-success " >Оновити</a>
+    <a href="/logout" class="btn btn-info " >Вихід</a></div></div>
+</div>
+
+
+
+  <hr>  
+  <div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-8 ">
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Магазин</th>
+      <th>Цифeрка</th>
+       <th style="text-align:right;">Час оновлення</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      <% for(var i=0; i<quotes.length; i++) {%>
+     <tr>
+     
+      <th scope="row"><%= i+1 %></th>
+      <td><%= quotes[i].name %></td>
+      <td style="font-weight: bold;background-color:cornflowerblue;"><%= quotes[i].quote %></td>
+      <td style="text-align:right;"><%= quotes[i].time %></td>
+    </tr>
+      <% } %>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+</div>
+</div>
+ <hr>
+ <div class="row justify-content-md-center">
+      <footer class="footer centered">
+        <p>&copy; Ternopil 2017</p>
+      </footer>
+
+    </div>
+    </div>
+    
+
+   <script src="main.js"></script>
+
+</body>
+</html
